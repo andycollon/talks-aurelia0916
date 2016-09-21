@@ -1,0 +1,14 @@
+<template>
+    <require from="styles/main.css"></require>
+    <require from="dragula/dragula.css"></require>
+    <require from="./grid/grid"></require>
+    <require from="./aside/aside"></require>
+    <h1>Welcome to ${title}</h1>
+
+<div class="col-xs-8">
+    <grid puzzle.bind="puzzle" view-model.ref="grid"></grid>
+</div>
+<div class="col-xs-4">
+    <aside number-of-moves.bind="grid.numberOfMoves" seconds-elapsed.bind="grid.secondsElapsed" picture.bind="puzzle.picture"></aside>
+</div>
+</template>

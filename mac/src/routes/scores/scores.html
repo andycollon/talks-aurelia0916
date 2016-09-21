@@ -1,0 +1,16 @@
+<template>
+    <h1>Welcome to ${title}</h1>
+
+<div if.bind="scoreCounter.scores.length > 0">
+    <div class="row">
+        <div class="col-xs-4">Name</div>
+        <div class="col-xs-8"></div>
+    </div>
+
+    <div class="row" repeat.for="score of scoreCounter.scores | sort:'total':'descending'">
+        <div class="col-xs-4">${score.playerName}</div>
+        <div class="col-xs-8">${score.total}</div>
+    </div>
+</div>
+
+</template>

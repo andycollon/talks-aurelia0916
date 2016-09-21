@@ -1,0 +1,14 @@
+<template>
+  <ai-dialog>
+    <ai-dialog-body>
+        <h1>Score: ${score.total}</h1>
+      <h2>Player Name</h2>
+      <input value.bind="score.playerName" />
+    </ai-dialog-body>
+
+    <ai-dialog-footer>
+      <button click.trigger="controller.cancel()">Cancel</button>
+      <button click.trigger="controller.ok(score)">Ok</button>
+    </ai-dialog-footer>
+  </ai-dialog>
+</template>
